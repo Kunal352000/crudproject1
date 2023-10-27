@@ -19,5 +19,7 @@ from django.urls import path
 from enroll import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.add_show, name="addandshow")
+    path('',views.add_show, name="addandshow"), # name is for dyanamic data 
+    path('delete/<int:id>/',views.delete_data, name="deletedata"), #name is for dyanmic data
+    path('update/<int:id>/',views.update_data, name="updatedata"), #name is for dynamic data
 ]
